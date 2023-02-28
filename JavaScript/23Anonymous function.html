@@ -1,0 +1,43 @@
+<html>
+    <body>
+        This is callback function!!
+        <script>
+            function ok(){  
+                alert("User clicked ok")
+            }
+            function cancel(){
+                alert("User clicked cancel")
+            }
+            function ask(question,yes,no){
+                let f=confirm(question)
+                if(f){
+                    yes()
+                }else{
+                    no()
+                }
+                
+            }
+            ask("Do you want to exit?",ok,cancel)  //ok and cancel this 2 are of us callback function declared at the
+                                                  //top and use it later
+        </script>
+    </body>
+</html>
+
+<!--Second way using anonymous function == the function only has body dont have name of function name-->
+
+<html>
+    <body>
+        <script>
+            function ask(question,yes,no){
+                let f=confirm(question)
+                if(f){               //or (f==true)
+                    yes()
+                }else{
+                    no()
+                }
+            }                                //instead of ok and cancel we declared overall functions here
+            ask("Do you want to exit?", function(){alert("user clicked ok")},function(){alert("user clicked cancel")})
+
+        </script>
+    </body>
+</html>
