@@ -1,0 +1,19 @@
+/* 2.Write a   program to add 'ing' at the end of a given string (length should be at least 3). If the given string already ends with 'ing' then add 'ly' instead. If the string length of the given string is less than 3, leave it unchanged. 
+Sample String : 'abc'
+Expected Result : 'abcing' 
+Sample String : 'string'
+Expected Result : 'stringly' */
+let s1="mo"
+let s2= s1.length
+console.log(s2)
+
+if(s2>3){
+    if(s1.endsWith('ing')){
+        console.log(s1+'ly')
+    }
+    else if(!s1.endsWith('ing')){
+        console.log(s1+'ing')
+    }
+    
+}
+console.log(s1)
