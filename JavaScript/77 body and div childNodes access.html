@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <script>
+            function show(){
+                let obj1=document.body.childNodes;
+
+
+             /*********body tag  child nodes*****/
+                for(let i=0;i<obj.length;i++){
+                    console.log(arr[i])
+                } 
+             for(let i=0;i<document.body.childNodes.length;i++){
+                    console.log(document.body.childNodes[i])
+                }
+            }  
+
+         /****** DIV tag child nodes**********/
+            let obj2=document.getElementById("d2")
+            for(let i=0;i<obj.childNodes.length;i++){
+                console.log(obj.childNodes[i])
+            }
+
+            /******Table tag child nodes*****/
+            let obj3=document.getElementById("t1")
+            for(let i=0;i<obj3.childNodes.length;i++){
+                console.log(obj3.childNodes[i])
+            }    
+
+        function display(){
+            let obj4=document.getElementById("d1")
+            ob.innerText="Hello World"
+        }
+</script>
+    </head>
+    <body>
+        <div id="d1">
+                        <!--Child nodes of div d1 is #text-->
+            </div>
+        <div id="'d2">
+            <p> </p>  <!--Child nodes of div d2 is #text , p tag -->
+         </div>  
+         
+         <table id="t1">
+            <tr>
+                <td></td>
+            </tr>
+         </table>
+         <input type="button" value="OK" onclick="show()">
+         <input type="button" value="insert Text" onclick="display()">
+         
+        
+    </body>
+</html>
