@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <script>
+            function sayHi(){
+                alert("hi")
+            }
+            function sayHello(){
+                alert("Hello")
+            }
+        </script>
+        <input type="button" value="Click Here" id="b1">
+        <script>
+            //b1.onclick=sayHello  //not passible to call both the function in this way it will override the sayHello by sayHi
+            //b1.onclick=sayHi
+        let ob=document.getElementById('b1')
+        ob.addEventListener('click',sayHello)
+        ob.addEventListener('click',sayHi)
+        </script>
+    </body>
+</html>
