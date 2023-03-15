@@ -1,0 +1,14 @@
+<html>
+    <body>Hello
+      <!--this is comment-->
+      <script>
+        function show(){
+            let ob=document.body.firstChild
+            alert(ob.data)            //either you can use data or nodeValue
+            let ob2=ob.nextSibling
+            alert(ob2.nodeValue)
+        }
+      </script>
+      <input type="button" value="OK" onclick="show()">
+    </body>
+</html>
