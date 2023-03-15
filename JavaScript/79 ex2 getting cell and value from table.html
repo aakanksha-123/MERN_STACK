@@ -1,0 +1,36 @@
+<html>
+    <body>
+        <table id="mytable">
+         <tr>
+            <td>100</td>
+            <td>200</td>
+         </tr>
+         <tr>
+            <td>300</td>
+            <td>400</td>
+       
+         </tr>
+           
+        </table>
+        <script>
+            function changeColor(){
+                let mt=document.getElementById("mytable")
+                let mr=mt.rows[1].cells[0]
+                mr.style.backgroundColor="red"
+            }
+            function changeNumber(){
+                let mt=document.getElementById("mytable")
+                let mr=mt.rows[1].cells[1]
+                let mn=prompt("enter your number:")
+              //mr.innerText=900
+                mr.innerText=mn
+            }
+
+        </script>
+        <input type="button" value="click Here" onclick="changeColor()">
+        <input type="button" value="changeNumber" onclick="changeNumber()">
+
+
+    </body>
+
+</html>
