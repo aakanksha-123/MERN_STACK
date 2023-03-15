@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <br>
+        <script>
+            function add(){
+                let div1=document.createElement('div') //created div tag
+                div1.innerHTML="<h1>Hello World</h1>"  //content inside the div tag   //div tag get created
+                document.body.append(div1)  //append that div tag inside body
+
+                let ob=document.createElement('input')  //create input
+                ob.type="text"                      //set type==text          //input box get created
+                ob.name="fname"                      //set name==fname
+                document.body.append(ob)           //append input in the body
+            }
+        </script>
+        <input type="submit" value="OK" onclick="add()">
+    </body>
+</html>
