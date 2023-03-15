@@ -1,0 +1,18 @@
+<!--nodeType==> It is use to specify the type of node
+                 1) 1 for HTML element
+                 2) 3 for text node
+                 3) 9 for document object-->
+
+<html>
+    <body>
+        Hello  <!--Text node-->
+        <br>
+        <script>
+            alert(document.body.nodeType)  //1   
+            let arr=document.body.childNodes
+            alert(arr[0].nodeType)   //3    
+            alert(document.nodeType)  //9
+            
+        </script>
+    </body>
+</html>
