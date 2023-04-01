@@ -1,0 +1,18 @@
+<!--
+    
+14. Which of these alerts are going to execute?
+a. if (-1 || 0) alert( 'first' );
+b. if (-1 && 0) alert( 'second' );
+c. if (null || -1 && 1) alert( 'third' );
+-->
+
+
+<html>
+    <body>
+        <script>
+           if (-1 || 0) alert( 'first' );//true that's why executed
+          if (-1 && 0) alert( 'second' );//false that's why not executed
+         if (null || -1 && 1) alert( 'third' ); //true that's why executed
+        </script>
+    </body>
+</html>
