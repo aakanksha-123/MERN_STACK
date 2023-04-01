@@ -1,0 +1,99 @@
+<!--Assignment
+  You will create a web form to ask the user to enter the following information using 
+  the appropriate HTML5 form controls (elements) to represent each item in the list below:
+
+    First Name ➔ input field of type text.
+    Last Name ➔ input field of type text.
+    Email Address ➔ input field of type email.
+    Address ➔ input field of type text.
+    City ➔ input field of type text.
+    Radio buttons with the following options (one of these options should be selected as default, 
+    usually the first one): * Premium Membership * Standard Membership * Basic Membership
+    Send button to call (trigger) a function named “userForm()”, which you will have to create, 
+    will take all the form information (user’s input).
+    Cancel button to reset the form elements.-->
+
+    <html>
+        <!--Form-->
+        <body>
+            <form>
+            First Name: <input type="text" id="t1">
+            <br>
+            <br>
+            Last Name: <input type="text" id="t2">
+            <br>
+            <br>
+            Email Address: <input type="text" id="t3">
+            <br>
+            <br>
+            Address:  <input type="text" id="t4">
+            <br>
+            <br>
+            city: <input type="text" id="t5">
+            <br>
+            <br>
+            
+          Premium Membership: 
+            <input type="radio" id="r1" value="Standard Membership" name="member" onclick="insert(this)">  
+              <label for="r1">Standard Membership </label>
+             <input type="radio" id="r2" value="Basic Membership" name="member" onclick="insert(this)">
+              <label for="r2">Basic Membership</label>
+           
+          </form>
+          <!--Button-->
+          <input type="submit" onclick="userForm()">
+          <input type="reset">
+          <br>
+          <br>
+          <!--table-->
+          <table border="1" id="mytable">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email Address</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Premium Membership</th>
+            </tr>
+          </table>
+          <!--Js code-->
+          <script>
+            let member=""
+            function userForm(){
+
+
+                let fname=document.getElementById("t1").value
+                let lname=document.getElementById("t2").value
+                let email=document.getElementById("t3").value
+                let address=document.getElementById("t4").value
+                let city=document.getElementById("t5").value
+               // let pm1=document.getElementById("r1").value
+               // let pm2=document.getElementById("r2").value
+                // if(id==r1){
+                //     let pm1=document.getElementById("r1").value
+                // }else{
+               
+                // let pm2=document.getElementById("r2").value
+                // }
+
+                let mt=document.getElementById("mytable")
+                let tr1=document.createElement('tr')
+
+                let arr=[fname,lname,email,address,city,member];
+              
+                for(let i=0;i<arr.length;i++){
+                    let c1=document.createElement('td')
+                    c1.textContent=arr[i]
+
+                    tr1.append(c1)
+                    mt.append(tr1)
+                }
+               
+            }
+            function insert(p){
+                member=p.value
+                  //alert(p.value)
+                }
+          </script>
+        </body>
+    </html>
