@@ -1,0 +1,98 @@
+<!--Assigments
+
+    Design a web form following the wireframe guidelines below. Notice that the image below is
+     just a sample so you can use any styles like colour, font, layout, width, or borders plus any
+      HTML Tags that you prefer.
+    User can type his/her numbers with a space between each number (as a string with the space 
+    character as a delimiter or space separated numeric values) inside an input box
+     (You need to notify the user to enter the numbers with a space between every two numbers as shown in the diagram).
+    Then the user can choose only one of the basic excel functions (radio buttons) to do the required calculation.
+    When the button “Calculate” is clicked, a function named myExcelFuns() will be loaded (triggered)
+     so you will need to add “onClick” event to the form button “Calculate”, and
+      inside myExcelFuns function body (block) you will have to do the following:
+        Get the user input (string of numbers and spaces) and save it into a variable named “numberStr”.
+        Make sure to remove all the extra spaces before and after the user input (Remove whitespace from both sides of a string) using the appropriate JavaScript built-in method.
+        Convert the string user input “numberStr” into an array of numbers named “numberArr” using the appropriate JavaScript built-in method for array object.
+    Continuing inside myExcelFuns(), you will use if condition to scan or to check which radio button was selected and based on this selection you will do the right calculations.
+        Use if else blocks to do the required calculation based on the selected radio button:
+            If (the AutoSum radio is checked) ➔ Do the calculation to find the total of all the numbers
+            else if (the Average radio is checked) ➔ Do the calculation to find the average of the numbers
+            else if (the Max radio is checked) ➔ Do the calculation to find the maximum number
+            else ➔ Do the calculation to find the minimum number
+        The returned value for each if condition has to be saved into a global variable based on our function (it’s a local variable based on the entire JS file) named “result”, 
+        so you will need to declare this empty variable first, then use it inside each if condition and else block.
+    There is more than one way to get the selected radio button option, one of them for example, is to give each radio button control an “id” in your HTML code:
+        <input type="radio" name="excel" id="sum">AutoSum
+        <input type="radio" name="excel" id="avg">Average
+    At the end of all the if else blocks (4 blocks), use the getElementById() method to print your result (the value of the result variable) 
+    into your specific HTML element.
+
+-->
+
+<html>
+    <head>
+        <script>
+            let op=" "
+            function myExcelFuns(){
+                let ob=document.getElementById("t1")
+                let s1=ob.value
+                //alert(s1)
+                let arr=s1.split(" ")
+                //alert(arr)
+                let m=0
+                if(op=="max"){
+                    m=Math.max(...arr)
+                }else if(op=="min"){
+                    m=Math.min(...arr)
+                }else if(op=="avg"){
+                    arr.forEach(element =>{
+                       num=Number(element)
+                        m=m+element/arr.length
+                    });
+                
+                }else if(op=="total"){
+                    arr.forEach(element =>{
+                       num=Number(element)
+                        m=m+num
+                    });
+                }
+                alert(m)
+            }
+
+                function check(p){
+                    op=p.value
+                }
+            
+        </script>
+        </head>
+        <body>
+            <input type="text" id="t1">
+            <br>
+            <input type="button" value="ok" onclick="myExcelFuns()">
+            <br>
+            <input type="radio" value="min" id="r1" name="op" onclick="check(this)">
+              <label for="r1">min</label>
+
+            <br>
+            <input type="radio" value="max" id="r2" name="op" onclick="check(this)">
+              <label for="r1">max</label>
+
+            <br>
+            <input type="radio" value="avg" id="r3" name="op" onclick="check(this)">
+              <label for="r1">avg</label>
+
+            <br>
+            <input type="radio" value="total" id="r4" name="op" onclick="check(this)">
+              <label for="r1">total</label>
+
+            <br>
+
+            <div id="d1"></div>
+            <div id="d2"></div>
+            <div id="d3"></div>
+            <div id="d4"></div>
+
+            
+        </body>
+    
+</html>
