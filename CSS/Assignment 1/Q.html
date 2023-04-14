@@ -1,0 +1,48 @@
+<!--Write a JS program in which Change the Background color and color of a Paragraph using DOM element-->
+<html>
+    <head>
+        <script>
+            let clr=" "
+            function ChangeRED(){
+                let ob=document.getElementById("para")
+                ob.style.backgroundColor='red';
+               ob.style.border="dotted"
+               
+            }
+            function ChangeGREEN(){
+                let ob=document.getElementById("para")
+                ob.style.backgroundColor='green';
+               ob.style.border="dotted"
+               
+            }
+            function ChangeYELLOW(){
+                let ob=document.getElementById("para")
+                ob.style.backgroundColor='yellow';
+               ob.style.border="dotted"
+               
+            }
+           
+               
+        </script>
+    </head>
+    <body>
+        <p id="para">Information is an abstract concept that refers to that which has the power to inform. 
+            At the most fundamental level information pertains to the interpretation of that which may be sensed.
+            Any natural process that is not completely random and any observable pattern in any medium can be said to 
+            convey some amount of information.
+             Whereas digital signals and other data use discrete signs to convey information,
+              other phenomena and artefacts such as analogue signals, poems, pictures, music or other sounds, 
+            and currents convey information in a more continuous form</p>
+            <br>
+            <input type="radio" value="red" id="r2" name="clr" onclick="ChangeRED()">
+              <label for="r2">Red</label>
+
+          <br>
+            <input type="radio" value="green" id="r3" name="clr" onclick="ChangeGREEN()">
+              <label for="r3">Green</label>
+
+            <br>
+            <input type="radio" value="yellow" id="r4" name="clr" onclick="ChangeYELLOW()">
+              <label for="r4">Yellow</label> 
+    </body>
+</html>
