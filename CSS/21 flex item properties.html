@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <style>body{
+            margin:100px;
+        }
+        .box{
+            background-color: #444;
+            color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            font-size: 150px;
+            width: 100px;}
+            .wrapper{
+                display: flex;
+                flex-direction:row;
+                /*flex-wrap:wrap-reverse;*/
+                justify-content: space-evenly;
+                background-color: aqua;
+                align-items: center;
+                grid-gap: 10px;
+                height: 500px;
+            }
+            .box3{
+                order: 3;
+                flex-grow: 3;
+            }
+            .box2{
+                flex-grow: 2;
+            }
+            </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="box box3">1</div>
+            <div class="box box2">2</div>
+            <div class="box">3</div>
+           
+        </div>
+
+        </div>
+    </body>
+</html>

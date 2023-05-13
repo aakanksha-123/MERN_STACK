@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example 11</title>    </head>
+        <style>
+            .body{
+                margin: 40px;
+              
+            }
+            .sidebar{
+                grid-area:sidebar;
+            }
+            .content{
+            grid-area:content;
+            }
+            .header{
+                grid-area:header;
+            }
+            .footer{
+                grid-area:footer;
+            }
+            .wrapper{
+                display: grid;
+                grid-gap:10px;
+                grid-template-columns: 120px 120px 120px;
+                grid-template-areas: 
+                  ".... header header"
+                  "sidebar content content"
+                  "footer footer footer";
+                background-color: #fff;
+                color: #444;
+            }
+            .box{
+                background-color: #444;
+                color: #ffff;
+                border-radius: 5px;
+                padding:20px;
+            font-size: 150%;
+        }
+        .header{
+            background-color: #999;
+        }
+        </style>
+        <body>
+            <div class="wrapper">
+                <div class="box header">Header</div>
+                <div class="box sidebar">sidebar</div>
+                <div class="box content">content</div>
+                <div class="box footer">footer</div>
+            </div>
+        </body>
+</html>
